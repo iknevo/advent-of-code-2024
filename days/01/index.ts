@@ -2,7 +2,7 @@ import { readInput } from "../../utils/readInput";
 
 // const lines = await readInput("./sample.txt");
 const lines = await readInput("./input.txt");
-export function part1() {
+function part1() {
   const left: number[] = [];
   const right: number[] = [];
   lines.forEach((line) => {
@@ -20,7 +20,7 @@ export function part1() {
     .reduce((sum, value) => sum + value, 0);
   console.log(result);
 }
-export function part2() {
+function part2() {
   const left: number[] = [];
   const counts = new Map<number, number>();
   lines.forEach((line) => {
@@ -39,4 +39,5 @@ export function part2() {
     .reduce((sum, value) => sum + value, 0);
   console.log(result);
 }
+part1();
 part2();
